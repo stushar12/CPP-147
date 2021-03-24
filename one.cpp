@@ -9,7 +9,7 @@ bool areIsomorphic(string s1, string s2)
     int m2[256]={0};
     for(int i=0;i<n1;i++)
     {
-        if(!m1[s1[i]] && !m2[s2[i]])                            //when value of that character in the map is 0 i.e it is the first variable
+        if(m1[s1[i]]==0 && !m2[s2[i]]==0)                            //when value of that character in the map is 0 i.e it is the first variable
         {
             m1[s1[i]] = s2[i];
             m2[s2[i]] = s1[i];
